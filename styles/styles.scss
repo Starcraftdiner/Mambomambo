@@ -1,0 +1,202 @@
+// Variables
+/// Colors
+$background: #f9efe6;
+$text: #442d2d;
+
+/// Fonts
+$font-grotesk: "Founders Grotesk";
+$font-gascogne: "Gascogne Light";
+
+.sag {
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: $text;
+    }
+
+    background-color: $background;
+    color: $text;
+    font-family: $font-grotesk;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 3.75rem;
+    margin-right: 3.75rem;
+    padding: 0;
+
+    // Header
+    &-header {
+        align-items: center;
+        border-bottom: 1px solid #442d2d;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 3.125rem;
+        padding-top: 3rem;
+
+        &-start-container {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+
+            &-bars {
+                margin-right: 0.75rem;
+
+                #burger-menu {
+                    height: 10px;
+                    overflow: visible;
+                    position: relative;
+                    width: 20px;
+                    z-index: 2;
+                }
+                #burger-menu span,
+                #burger-menu span:before,
+                #burger-menu span:after {
+                    background: $text;
+                    display: block;
+                    height: 2px;
+                    opacity: 1;
+                    position: absolute;
+                    transition: 0.3s ease-in-out;
+                }
+                #burger-menu span:before,
+                #burger-menu span:after {
+                    content: "";
+                }
+                #burger-menu span {
+                    width: 20px;
+                }
+                #burger-menu span:before {
+                    width: 20px;
+                }
+                #burger-menu span:after {
+                    top: 10px;
+                    width: 20px;
+                }
+
+                #burger-menu.close span {
+                    transform: rotate(-45deg);
+                }
+                #burger-menu.close span:before {
+                    top: 0px;
+                    transform: rotate(90deg);
+                    width: 20px;
+                }
+                #burger-menu.close span:after {
+                    left: 0;
+                    opacity: 0;
+                    top: 0px;
+                    transform: rotate(90deg);
+                    width: 0;
+                }
+
+                #menu {
+                    height: 0;
+                    min-width: 12.5%;
+                    min-height: 15%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    transition: all 0.3s ease-in-out;
+                    visibility: hidden;
+                    z-index: 1;
+                }
+
+                #menu.overlay {
+                    opacity: 1;
+                    padding-left: 4rem;
+                    padding-top: 10rem;
+                    visibility: visible;
+                }
+
+                #menu li {
+                    list-style: none;
+                }
+                #menu a {
+                    border-style: none;
+                    color: $text;
+                    display: block;
+                    font-size: 32px;
+                    margin-bottom: 30px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &-end-container {
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 0.5rem;
+
+            &-text {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &-logo-container {
+            cursor: pointer;
+            margin-left: -0.5rem;
+        }
+    }
+
+    // Content
+    &-content {
+        display: flex;
+
+        &-image-container {
+            box-sizing: border-box;
+            cursor: pointer;
+            padding-right: 5rem;
+            width: 40%;
+
+            &-image {
+                display: block;
+                height: 90%;
+                margin-left: 5rem;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+
+        &-texts-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 57%;
+
+            &-title {
+                cursor: pointer;
+                margin-bottom: 2rem;
+                text-decoration: bold;
+            }
+
+            &-paragraph {
+                font-family: $font-gascogne;
+                font-size: 60px;
+                font-weight: 200;
+                margin: 0 auto;
+                width: 42%;
+
+                span {
+                    font-family: $font-grotesk;
+                }
+            }
+
+            &-links {
+                display: flex;
+                justify-content: center;
+
+                &-link {
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                    margin-top: 2.5rem;
+                }
+
+                a {
+                    border-bottom: 1px solid currentColor;
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}

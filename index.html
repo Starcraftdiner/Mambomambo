@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="author" content="Mathieu Rioux">
+    <title>SAG</title>
+</head>
+
+<body class="sag">
+    <header class="sag-header">
+        <div class="sag-header-start-container">
+            <div class="sag-header-start-container-bars">
+                <div id="burger-menu">
+                    <span></span>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">Bienvenue</a></li>
+                        <li><a href="#">À propos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sag-header-start-text">Menu</div>
+        </div>
+        <div class="sag-header-logo-container">
+            <img class="sag-header-logo-container-logo" src="/SAG/assets/logo/logo.svg" alt="Sagacia Logo">
+        </div>
+        <div class="sag-header-end-container">
+            <a href="#" class="sag-header-end-container-text">Prenez rendez-vous</a>
+        </div>
+    </header>
+    <section class="sag-content">
+        <div class="sag-content-image-container">
+            <img class="sag-content-image-container-image" src="/SAG/assets/img/photo.jpg" alt="Sagacia Photo">
+        </div>
+        <div class="sag-content-texts-container">
+            <div class="sag-content-texts-container-title">À PROPOS</div>
+            <p class="sag-content-texts-container-paragraph"><span>CABINET</span> conseil déterminé à vous aider</p>
+
+            <div class="sag-content-texts-container-links">
+                <div class="sag-content-texts-container-links-link">
+                    <a href="#">Nos forces</a>
+                </div>
+                <div class="sag-content-texts-container-links-link">
+                    <a href="#">Notre approche</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+    </script>
+</body>
+
+</html>
